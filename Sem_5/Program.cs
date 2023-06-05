@@ -251,16 +251,19 @@ int Res = 0;
 for (int i = 0; i < array.Length; i++)
 {
     
-    if (( array[i] % 2 ) == 0 );
-    {
-        Console.WriteLine(( array[i] % 2  +"Четное" ));
+    if (( array[i]) % 2  == 0 )
+       {
+        //Console.WriteLine(( array[i]   +"  Четное" ));
         Res = Res + 1;
-    }
+       }
 
-    
+       // else
+       //  {
+             //Console.WriteLine(( array[i]   +"  НЕ Четное" ));
+       //  }
         
     
-    Console.WriteLine("РЕЗУЛЬТАТ " + Res);
+    //Console.WriteLine("Кол-во четных " + Res);
 }
 
 Console.WriteLine($"в массиве: {array} количество чётных чисел = {Res}");
