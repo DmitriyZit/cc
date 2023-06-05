@@ -253,13 +253,17 @@ for (int i = 0; i < array.Length; i++)
     
     if (( array[i] % 2 ) == 0 );
     {
-        
+        Console.WriteLine(( array[i] % 2  +"Четное" ));
         Res = Res + 1;
     }
-    Console.WriteLine(Res);
+
+    
+        
+    
+    Console.WriteLine("РЕЗУЛЬТАТ " + Res);
 }
 
-//Console.WriteLine($"в массиве: {array} количество чётных чисел = {Res}");
+Console.WriteLine($"в массиве: {array} количество чётных чисел = {Res}");
 
 /*
 Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
