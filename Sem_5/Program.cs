@@ -127,7 +127,7 @@ Console.WriteLine($"Массив: [ {String.Join("; ", array)}]");
 Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
 4; массив [6, 7, 19, 345, 3] -> нет
 -3; массив [6, 7, 19, 345, 3] -> да
-*/
+
 
 Console.Write("Введите нижнюю границу массива : ");
 int minValue = Convert.ToInt32(Console.ReadLine());
@@ -195,3 +195,64 @@ else
 Console.WriteLine($"число {number} нет в массиве [ {String.Join("; ", array)}]");
 }
 */
+
+// ДОМАШНЯЯ РАБОТА
+
+/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+Напишите программу, которая покажет количество чётных чисел в массиве.
+[345, 897, 568, 234] -> 2
+*/
+
+Console.Write("Введите нижнюю границу массива : ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+
+    
+Console.Write("Введите верхнюю границу массива : ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите длину массива : ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+
+if (minValue <100 || minValue > 1000)
+    {
+        Console.WriteLine($"число {minValue} не трехзначное");
+        Console.WriteLine("Попробуйте снова");       
+    return;
+    }
+
+
+        if (maxValue <100 || maxValue > 1000)
+        {
+            Console.WriteLine($"число {maxValue} не трехзначное");
+            Console.WriteLine("Попробуйте снова");       
+    return;
+        }
+    
+
+int[] GetArray(int size, int minValue, int maxValue)
+{
+    int[] resArray = new int[size];
+    for (int i=0; i< resArray.Length; i++)
+    {
+        resArray[i] =new Random().Next(minValue, maxValue + 1);
+
+    }
+    return resArray;
+}
+
+int[] array = GetArray(size, minValue, maxValue);
+
+Console.WriteLine($"Массив: [ {String.Join("; ", array)}]");
+
+
+
+/*
+Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+[3, 7, 23, 12] -> 19
+[-4, -6, 89, 6] -> 0
+
+Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+[3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
+*/
+
