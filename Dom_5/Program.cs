@@ -74,7 +74,7 @@ Console.WriteLine($"в массиве:  [ {String.Join("; ", array)}] колич
 Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0
-*/
+
 
 int[] GetArray(int size, int minValue, int maxValue)
 {
@@ -93,18 +93,63 @@ Console.WriteLine($"Массив: [ {String.Join("; ", array)}]");
 int sum = 0;
 for (int i = 1; i < array.Length; i = i+2)
 {
-   // if (( array[i]) / 2  != 0 )
-   // {
+   
        sum = sum + array[i];
-   // }
+   
 
 }
-//return sum;
-Console.WriteLine(sum);
 
+Console.WriteLine(sum);
+*/
 
 /*
 Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 */
+
+
+double[] GetArray(int size)
+{
+    double[] resArray = new double[size];
+    for (int i=0; i< resArray.Length; i++)
+    {
+        resArray[i] = new Random().NextDouble() * 10;
+
+    }
+    return resArray;
+}
+int size = 6;
+double[] array = GetArray(size);
+
+
+Console.WriteLine($"Массив: [ {String.Join("; ", array)}]");
+
+
+// находим мин и мах
+double max = 0;
+double min = 0;
+min = array[0];
+max = array[0];
+for (int i = 0; i < size; i++)
+
+{
+    
+        if (max < array[i])
+        {   
+            max = array[i];
+            Console.WriteLine ("Число max  " +max );
+        }
+        if (min > array[i])
+        {
+            min = array[i];
+            Console.WriteLine ("Число min  " +min );
+        }
+}    
+Console.WriteLine ("Число  " +max + " является максимальным" );
+Console.WriteLine ("Число  " +min + " является минимальным" );
+double result = 0;
+result = max - min;
+result = Math.Round(result, 2);
+Console.WriteLine($"Разницу между максимальным {max} и минимальным элементов массива {min} = {result}");
+
 
