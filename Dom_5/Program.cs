@@ -137,19 +137,19 @@ for (int i = 0; i < size; i++)
         if (max < array[i])
         {   
             max = array[i];
-            Console.WriteLine ("Число max  " +max );
+           // Console.WriteLine ("Число max  " +max );
         }
         if (min > array[i])
         {
             min = array[i];
-            Console.WriteLine ("Число min  " +min );
+           // Console.WriteLine ("Число min  " +min );
         }
 }    
-Console.WriteLine ("Число  " +max + " является максимальным" );
-Console.WriteLine ("Число  " +min + " является минимальным" );
+Console.WriteLine ("Число  " +Math.Round(max, 2) + " является максимальным" );
+Console.WriteLine ("Число  " +Math.Round(min, 2) + " является минимальным" );
 double result = 0;
 result = max - min;
 result = Math.Round(result, 2);
-Console.WriteLine($"Разницу между максимальным {max} и минимальным элементов массива {min} = {result}");
+Console.WriteLine($"Разницу между максимальным {Math.Round(max, 2)} и минимальным элементом массива {Math.Round(min, 2)} = {result}");
 
 
