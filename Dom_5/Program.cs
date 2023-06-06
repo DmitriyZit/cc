@@ -150,6 +150,6 @@ Console.WriteLine ("Число  " +Math.Round(min, 2) + " является ми�
 double result = 0;
 result = max - min;
 result = Math.Round(result, 2);
-Console.WriteLine($"Разницу между максимальным {Math.Round(max, 2)} и минимальным элементом массива {Math.Round(min, 2)} = {result}");
+Console.WriteLine($"Разница между максимальным {Math.Round(max, 2)} и минимальным элементом массива {Math.Round(min, 2)} = {result}");
 
 
