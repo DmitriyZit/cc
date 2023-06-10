@@ -87,6 +87,42 @@ int[] GetArray(int size, int minValue, int maxValue)
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223-> 3
 */
+Console.Write("Введите колличество чисел : ");
+int numberOfnumbers = Convert.ToInt32(Console.ReadLine());
+int[] GetArray(int size)
+ {
+     int[] array = new int[numberOfnumbers];
+
+     for (int i = 0; i < numberOfnumbers; i++)
+     {
+         Console.Write("Введите число : ");
+         array[i] = Convert.ToInt32(Console.ReadLine());
+         
+     }
+
+     return array;
+ }
+int[] resultArray = GetArray(numberOfnumbers);
+Console.WriteLine($"массив: [{String.Join("; ", resultArray)}]");
+
+//int Positiv()
+ //{
+    int morezero = 0;
+    int lesszero = 0;
+    for (int i = 0; i < numberOfnumbers; i++)
+     {
+        if(resultArray[i] > 0)
+        {
+           morezero = morezero + 1; 
+        }
+        else
+        
+         lesszero = lesszero + 1;
+     }  
+   
+Console.WriteLine("Число положительных чисел = " + morezero ); //  + "Число отрицательных = " + lesszero);
+
+
 
 
 
