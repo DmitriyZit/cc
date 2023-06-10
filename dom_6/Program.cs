@@ -120,7 +120,7 @@ Console.WriteLine($"массив: [{String.Join("; ", resultArray)}]");
          lesszero = lesszero + 1;
      }  
    
-Console.WriteLine("Число положительных чисел = " + morezero ); //  + "Число отрицательных = " + lesszero);
+Console.WriteLine("Число положительных чисел = " + morezero  + "  Число отрицательных = " + lesszero);
 
 
 
