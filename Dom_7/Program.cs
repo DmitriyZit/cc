@@ -195,7 +195,10 @@ int[,] FillArray(int[,] matr)
     FillArray(matrix);
     Console.WriteLine();
     PrintArray(matrix);
-    
+
+
+    void Average()
+    { 
     int sum = 0;
     int j = 0;
         for (int i = 0; i < numrows; i++)
@@ -205,7 +208,10 @@ int[,] FillArray(int[,] matr)
     //double average = sum / numrows;
     Console.WriteLine (sum);
     
-    Console.WriteLine("Среднее арифмитическое столбца  = "  + Math.Round( (double) sum / numrows , 1));
+    //Console.WriteLine("Среднее арифмитическое столбца  = " + (j) + Math.Round( (double) sum / numrows , 1));
     //Console.WriteLine ("Среднее арифмитическое =  " +average );
     //Math.Round(average, 4)
-
+    Console.WriteLine( $"Среднее арифмитическое столбца {j} = {Math.Round( (double) sum / numrows , 1)} ");
+    //int j = j+1;
+    }
+    Average();
