@@ -7,12 +7,12 @@ m = 3, n = 4.
 8 7,8 -7,1 9
 */
 
-Console.Write("Введите нижнюю границу массива : ");
-double minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите колличество строк массива : ");
+int numrows = Convert.ToInt32(Console.ReadLine());
 
     
-Console.Write("Введите верхнюю границу массива : ");
-double maxValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите колличество столбцов массива : ");
+int numcolum = Convert.ToInt32(Console.ReadLine());
 
 void PrintArray(double[,] matr)
 {
@@ -20,14 +20,15 @@ void PrintArray(double[,] matr)
     //matrix[1, 1] = 55;
     for (int i = 0; i < matr.GetLength(0); i++) 
     {
-     for (int j = 0; j < 4; j++)
+     for (int j = 0; j < matr.GetLength(1); j++)
      {
-        Console.Write($"{matr[i, j]},");
+        //Console.Write($"{matr[i, j]},");
+        Console.Write("\t" + matr[i, j].ToString("f2"));
      }
     Console.WriteLine();
     }
 }
-void FillArray(double[,] matr)
+double[,] FillArray(double[,] matr)
 {
     //int[,] matrix = new int[3, 4];
     //matrix[1, 1] = 55;
@@ -35,13 +36,15 @@ void FillArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-         matr[i,j] = new Random().NextDouble(1,10); //Random().Next(1,10);
-        // Console.Write($"{matrix[i, j]},");
+         matr[i,j] = new Random().NextDouble() * 10; //Random().Next(1,10);
+        // Console.Write($"{matrix[i, j]},"); numrows, numcolum +1
+        //matr[i,j] = Math.Round(matr, 2);
         }
     //Console.WriteLine();
     }
+    return matr;
 }
-double[,] matrix = new double[minValue, maxValue];
+double[,] matrix = new double[numrows, numcolum];
 PrintArray(matrix);
 FillArray(matrix);
 Console.WriteLine();
