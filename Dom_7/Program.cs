@@ -62,7 +62,7 @@ PrintArray(matrix);
 5 9 2 3
 8 4 2 4
 17 -> такого числа в массиве нет
-*/
+
 
 Console.Write("Введите колличество строк массива : ");
 int numrows = Convert.ToInt32(Console.ReadLine());
@@ -104,7 +104,7 @@ int[,] FillArray(int[,] matr)
     return matr;
 }
     int[,] matrix = new int[numrows, numcolum];
-    PrintArray(matrix);
+    //PrintArray(matrix);
     FillArray(matrix);
     Console.WriteLine();
     PrintArray(matrix);
@@ -124,7 +124,7 @@ int[,] FillArray(int[,] matr)
      else           
         Console.WriteLine("такого числа нет");
     
-
+*/
 
 /*Задача 52. Задайте двумерный массив из целых чисел. 
 Найдите среднее арифметическое элементов в каждом столбце.
@@ -144,4 +144,68 @@ int[,] FillArray(int[,] matr)
 8 4 2 4
 Сумма элементов главной диагонали: 1+9+2 = 12
 */
+
+Console.Write("Введите колличество строк массива : ");
+int numrows = Convert.ToInt32(Console.ReadLine());
+
+    
+Console.Write("Введите колличество столбцов массива : ");
+int numcolum = Convert.ToInt32(Console.ReadLine());
+
+void PrintArray(int[,] matr)
+{
+    //int[,] matrix = new int[3, 4];
+    //matrix[1, 1] = 55;
+    for (int i = 0; i < matr.GetLength(0); i++) 
+    {
+     for (int j = 0; j < matr.GetLength(1); j++)
+     {
+        //Console.Write($"{matr[i, j]},");
+        Console.Write("\t" + matr[i, j]);
+        //.ToString("f1")
+     }
+    Console.WriteLine();
+    }
+}
+
+int[,] FillArray(int[,] matr)
+{
+    //int[,] matrix = new int[3, 4];
+    //matrix[1, 1] = 55;
+    for (int i = 0; i < matr.GetLength(0); i++) 
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+         matr[i,j] = new Random().Next(1 , 10); //Random().Next(1,10);
+        // Console.Write($"{matrix[i, j]},"); numrows, numcolum +1
+        //matr[i,j] = Math.Round(matr, 2);
+        }
+    //Console.WriteLine();
+    }
+    return matr;
+}
+
+    
+    
+
+
+
+    int[,] matrix = new int[numrows, numcolum];
+    //PrintArray(matrix);
+    FillArray(matrix);
+    Console.WriteLine();
+    PrintArray(matrix);
+    
+    int sum = 0;
+    int j = 0;
+        for (int i = 0; i < numrows; i++)
+        {
+            sum = sum + matrix[i,j];
+        }
+    //double average = sum / numrows;
+    Console.WriteLine (sum);
+    
+    Console.WriteLine("Среднее арифмитическое столбца  = "  + Math.Round( (double) sum / numrows , 1));
+    //Console.WriteLine ("Среднее арифмитическое =  " +average );
+    //Math.Round(average, 4)
 
