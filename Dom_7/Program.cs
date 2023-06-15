@@ -184,9 +184,7 @@ int[,] FillArray(int[,] matr)
   
     
     int[,] matrix = new int[numrows, numcolum];
-    FillArray(matrix);
-    Console.WriteLine();
-    PrintArray(matrix);
+    
 
    
     void Average()
@@ -212,7 +210,7 @@ int[,] FillArray(int[,] matr)
     
     
  }
-    Average();
+    //Average();
 
 
 
@@ -228,8 +226,14 @@ int[,] FillArray(int[,] matr)
 
               j = j + 1;
             }
+            Console.WriteLine();
              Console.WriteLine ($"Сумма по диагонали = {sum} ");
     }
-   
+
+    FillArray(matrix);
+    Console.WriteLine();
+    PrintArray(matrix);
+    Average();
     Dioganal();
+    
     
