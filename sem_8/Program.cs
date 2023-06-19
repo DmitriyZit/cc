@@ -43,39 +43,43 @@ int[,] FillArray(int[,] matr)
     return matr;
 }
 
+// меняем строку 1 на последнюю
+// void ChangeString(int[,] matr)
+// {
+//     int lastString = matr.GetLength(0) -1;
+//     for (int i = 0; i < matr.GetLength(1); i++)
+//     {
+//         int temp = matr[0,i];
+//         matr[0,i] = matr[lastString, i];
+//         matr[lastString, i] = temp;
+//     }
+// }
 
-void ChangeString(int[,] matr)
-{
-    int lastString = matr.GetLength(0) -1;
-    for (int i = 0; i < matr.GetLength(1); i++)
-    {
-        int temp = matr[0,i];
-        matr[0,i] = matr[lastString, i];
-        matr[lastString, i] = temp;
-    }
-}
-
-void ColumnsPerRow(int[,] matr)
+void ColumnsPerRow(int[,] matr) // int [,] ColumnsPerRow(int[,] matr)
     // int j = 0;
 {
-    
-    for (int i = 0;  i < matr.GetLength(0); i++)
-    
+    int[,] matrixx = new int[matr.GetLength(0) ,matr.GetLength(1)];
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-       for (int j = 0; j < matr.GetLength(1); j++)
-       {
-        matr[i,j] = matr[j,i];
-       }
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matrixx[i,j] = matr[j,i];
+        }
     }
+      
+       //Console.WriteLine();
+       PrintArray(matrixx);
+//return matrixx;
 }
 
 int[,] matrix = new int[numrows, numcolum];
 PrintArray(matrix);
 FillArray(matrix);
-Console.WriteLine();
+Console.WriteLine("Исходная матрица");
 PrintArray(matrix);
-Console.WriteLine();
-ChangeString(matrix);
+Console.WriteLine("Перевернутая матрица");
+//ChangeString(matrix);
 ColumnsPerRow(matrix);
-PrintArray(matrix);
+//PrintArray(ColumnsPerRow(matrix));
+//PrintArray(matrix);
 //ChangeLines( matrix);
