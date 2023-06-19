@@ -212,7 +212,8 @@ int[,] FillArray(int[,] matr)
  }
     //Average();
 
-
+    //int sum = 0;
+    //int j = 0;
 
     void Dioganal()
     { 
