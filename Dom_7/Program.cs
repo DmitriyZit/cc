@@ -230,10 +230,6 @@ int[,] FillArray(int[,] matr)
             Console.WriteLine();
              Console.WriteLine ($"Сумма по диагонали = {sum} ");
     }
-<<<<<<< HEAD
-    Average();
-    */
-=======
 
     FillArray(matrix);
     Console.WriteLine();
@@ -242,4 +238,3 @@ int[,] FillArray(int[,] matr)
     Dioganal();
     
     
->>>>>>> 94da5a35dd398fee8597661c3bc3408f5bdf9dd6

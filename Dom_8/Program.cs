@@ -40,7 +40,7 @@ int[,] FillArray(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-         matr[i,j] = new Random().Next(-10 , 10); //Random().Next(1,10);
+         matr[i,j] = new Random().Next(10 , 10); //Random().Next(1,10);
         // Console.Write($"{matrix[i, j]},"); numrows, numcolum +1
         //matr[i,j] = Math.Round(matr, 2);
         }
@@ -54,20 +54,36 @@ int[,] FillArray(int[,] matr)
     Console.WriteLine();
     PrintArray(matrix);
 
-    int x = 0;
-    //int y = 0;
-    Console.Write("Введите координаты по строке : ");
-    int х = Convert.ToInt32(Console.ReadLine());
+    // int x = 0;
+    // //int y = 0;
+    // Console.Write("Введите координаты по строке : ");
+    // int х = Convert.ToInt32(Console.ReadLine());
 
-    Console.Write("Введите координаты по столбцу : ");
-    int y = Convert.ToInt32(Console.ReadLine());
+    // Console.Write("Введите координаты по столбцу : ");
+    // int y = Convert.ToInt32(Console.ReadLine());
 
-    if (x <= numrows && y <= numcolum)
+    // if (x <= numrows && y <= numcolum)
+    // {
+    //     Console.WriteLine("такое число есть и оно равно  " + matrix[x,y]);
+    // }
+    //  else           
+    //     Console.WriteLine("такого числа нет");
+
+      void Replase()
     {
-        Console.WriteLine("такое число есть и оно равно  " + matrix[x,y]);
+        
+        for (int i = 2; i < numrows; i+=2)
+        {
+                    
+             for(int j = 2; j < numcolum; j = j+2)
+            {
+             matrix[i,j] =  (int)Math.Pow(matrix[i,j] , 2);//[i,j] * matrix[i,j];
+            }   
+        }
+        Console.WriteLine();
+         PrintArray(matrix);
     }
-     else           
-        Console.WriteLine("такого числа нет");
+    Replase();
     
 
 
