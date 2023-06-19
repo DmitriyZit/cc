@@ -63,7 +63,7 @@ PrintArray(matrix);
 8 4 2 4
 17 -> такого числа в массиве нет
 
-
+*/
 Console.Write("Введите колличество строк массива : ");
 int numrows = Convert.ToInt32(Console.ReadLine());
 
@@ -95,7 +95,7 @@ int[,] FillArray(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-         matr[i,j] = new Random().Next(1 , 100); //Random().Next(1,10);
+         matr[i,j] = new Random().Next(-10 , 10); //Random().Next(1,10);
         // Console.Write($"{matrix[i, j]},"); numrows, numcolum +1
         //matr[i,j] = Math.Round(matr, 2);
         }
@@ -124,7 +124,7 @@ int[,] FillArray(int[,] matr)
      else           
         Console.WriteLine("такого числа нет");
     
-*/
+
 
 /*Задача 52. Задайте двумерный массив из целых чисел. 
 Найдите среднее арифметическое элементов в каждом столбце.
@@ -143,7 +143,7 @@ int[,] FillArray(int[,] matr)
 5 9 2 3
 8 4 2 4
 Сумма элементов главной диагонали: 1+9+2 = 12
-*/
+
 
 Console.Write("Введите колличество строк массива : ");
 int numrows = Convert.ToInt32(Console.ReadLine());
@@ -215,3 +215,4 @@ int[,] FillArray(int[,] matr)
     //int j = j+1;
     }
     Average();
+    */
