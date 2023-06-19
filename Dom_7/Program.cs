@@ -154,15 +154,14 @@ int numcolum = Convert.ToInt32(Console.ReadLine());
 
 void PrintArray(int[,] matr)
 {
-    //int[,] matrix = new int[3, 4];
-    //matrix[1, 1] = 55;
+    
     for (int i = 0; i < matr.GetLength(0); i++) 
     {
      for (int j = 0; j < matr.GetLength(1); j++)
      {
-        //Console.Write($"{matr[i, j]},");
+        
         Console.Write("\t" + matr[i, j]);
-        //.ToString("f1")
+        
      }
     Console.WriteLine();
     }
@@ -170,49 +169,76 @@ void PrintArray(int[,] matr)
 
 int[,] FillArray(int[,] matr)
 {
-    //int[,] matrix = new int[3, 4];
-    //matrix[1, 1] = 55;
+   
     for (int i = 0; i < matr.GetLength(0); i++) 
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
          matr[i,j] = new Random().Next(1 , 10); //Random().Next(1,10);
-        // Console.Write($"{matrix[i, j]},"); numrows, numcolum +1
-        //matr[i,j] = Math.Round(matr, 2);
+       
         }
     //Console.WriteLine();
     }
     return matr;
 }
-
+  
     
-    
-
-
-
     int[,] matrix = new int[numrows, numcolum];
-    //PrintArray(matrix);
-    FillArray(matrix);
-    Console.WriteLine();
-    PrintArray(matrix);
+    
 
-
+   
     void Average()
-    { 
+{ 
     int sum = 0;
-    int j = 0;
+    for (int j = 0; j < numcolum; j++)
+    {
+       sum = 0;
+    
+    
         for (int i = 0; i < numrows; i++)
         {
             sum = sum + matrix[i,j];
+
+            
+              
+           
         }
-    //double average = sum / numrows;
-    Console.WriteLine (sum);
+        Console.WriteLine( $"Среднее арифмитическое столбца {j} = {Math.Round( (double) sum / numrows , 1)} "); 
+     
+    }   
     
-    //Console.WriteLine("Среднее арифмитическое столбца  = " + (j) + Math.Round( (double) sum / numrows , 1));
-    //Console.WriteLine ("Среднее арифмитическое =  " +average );
-    //Math.Round(average, 4)
-    Console.WriteLine( $"Среднее арифмитическое столбца {j} = {Math.Round( (double) sum / numrows , 1)} ");
-    //int j = j+1;
+    
+    
+ }
+    //Average();
+
+
+
+    void Dioganal()
+    { 
+        int sum = 0;
+        int j = 0;
+    
+             for (int i = 0; i < numrows; i++)
+            {
+              sum = sum + matrix[i,j];
+            
+
+              j = j + 1;
+            }
+            Console.WriteLine();
+             Console.WriteLine ($"Сумма по диагонали = {sum} ");
     }
+<<<<<<< HEAD
     Average();
     */
+=======
+
+    FillArray(matrix);
+    Console.WriteLine();
+    PrintArray(matrix);
+    Average();
+    Dioganal();
+    
+    
+>>>>>>> 94da5a35dd398fee8597661c3bc3408f5bdf9dd6
