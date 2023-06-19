@@ -55,6 +55,20 @@ void ChangeString(int[,] matr)
     }
 }
 
+void ColumnsPerRow(int[,] matr)
+    // int j = 0;
+{
+    
+    for (int i = 0;  i < matr.GetLength(0); i++)
+    
+    {
+       for (int j = 0; j < matr.GetLength(1); j++)
+       {
+        matr[i,j] = matr[j,i];
+       }
+    }
+}
+
 int[,] matrix = new int[numrows, numcolum];
 PrintArray(matrix);
 FillArray(matrix);
@@ -62,5 +76,6 @@ Console.WriteLine();
 PrintArray(matrix);
 Console.WriteLine();
 ChangeString(matrix);
+ColumnsPerRow(matrix);
 PrintArray(matrix);
 //ChangeLines( matrix);
