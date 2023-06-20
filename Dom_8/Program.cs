@@ -128,7 +128,7 @@ int[,] Arrange(int[,] matr)
      {
          for (int j = 0; j < colums; j++)
          {
-          matrix[i,j] = new Random().Next(1 , 5); //Rmatrixndom().Next(1,10);
+          matrix[i,j] = new Random().Next(1 , 5); 
         
          }
 
@@ -308,9 +308,9 @@ int[,] Multiplicmat(int[,] matrix, int[,] matrixTwo)
          {
             for (int k = 0; k < depth; k++)
             {
-                matrix[i,j,k] = new Random().Next(10 , 50); //Rmatrixndom().Next(1,10);
+                matrix[i,j,k] = new Random().Next(10 , 50); 
             }
-          //matrix[i,j,k] = new Random().Next(10 , 50); //Rmatrixndom().Next(1,10);
+          
         
          }
 
