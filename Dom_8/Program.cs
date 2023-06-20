@@ -10,48 +10,48 @@
 8 4 4 2
 */
 
-  Console.Write("Введите колличество строк массива : ");
- int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите колличество строк массива : ");
+int rows = Convert.ToInt32(Console.ReadLine());
 
-    
- Console.Write("Введите колличество столбцов массива : ");
- int colums = Convert.ToInt32(Console.ReadLine());
- 
-  void Printmatrix(int[,] matrix)
- {
-    
-     for (int i = 0; i < matrix.GetLength(0); i++) 
-     {
-      for (int j = 0; j < matrix.GetLength(1); j++)
-      {
-        
-         Console.Write("\t" + matrix[i, j]);
-         //.ToString("f1")
-      }
-     Console.WriteLine();
-     }
- }
+
+Console.Write("Введите колличество столбцов массива : ");
+int colums = Convert.ToInt32(Console.ReadLine());
+
+void Printmatrix(int[,] matrix)
+{
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+
+            Console.Write("\t" + matrix[i, j]);
+            //.ToString("f1")
+        }
+        Console.WriteLine();
+    }
+}
 
 //  int rows = 4;
 //  int colums = 4;
- int[,] Fillmatrix(int[,] matrix)
- {
-    
-     for (int i = 0; i < rows; i++) 
-     {
-         for (int j = 0; j < colums; j++)
-         {
-          matrix[i,j] = new Random().Next(0 , 10); 
-        
-         }
+int[,] Fillmatrix(int[,] matrix)
+{
 
-     }
-     return matrix;
- }
- 
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < colums; j++)
+        {
+            matrix[i, j] = new Random().Next(0, 10);
+
+        }
+
+    }
+    return matrix;
+}
+
 int[,] Arrange(int[,] matr)
 {
-    
+
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
@@ -66,22 +66,22 @@ int[,] Arrange(int[,] matr)
                 }
             }
         }
-        
+
     }
     return matr;
-    
+
 }
 
-  int[,] matrix = new int[rows, colums];
+int[,] matrix = new int[rows, colums];
 
-     Fillmatrix(matrix);
-     Console.WriteLine();
-     Printmatrix(matrix);
-     Arrange(matrix);
-     Console.WriteLine("Упорядочная таблица");
-     Printmatrix(matrix);
+Fillmatrix(matrix);
+Console.WriteLine();
+Printmatrix(matrix);
+Arrange(matrix);
+Console.WriteLine("Упорядочная таблица");
+Printmatrix(matrix);
 
-     
+
 
 
 
@@ -100,78 +100,78 @@ int[,] Arrange(int[,] matr)
 //   Console.Write("Введите колличество строк массива : ");
 //  int sizeS = Convert.ToInt32(Console.ReadLine());
 
-    
+
 //  Console.Write("Введите колличество столбцов массива : ");
 //  int sizeV = Convert.ToInt32(Console.ReadLine());
- /*
-  void Printmatrix(int[,] matrix)
- {
-    
-     for (int i = 0; i < matrix.GetLength(0); i++) 
+/*
+ void Printmatrix(int[,] matrix)
+{
+
+    for (int i = 0; i < matrix.GetLength(0); i++) 
+    {
+     for (int j = 0; j < matrix.GetLength(1); j++)
      {
-      for (int j = 0; j < matrix.GetLength(1); j++)
-      {
-        
-         Console.Write("\t" + matrix[i, j]);
-         //.ToString("f1")
-      }
-     Console.WriteLine();
+
+        Console.Write("\t" + matrix[i, j]);
+        //.ToString("f1")
      }
- }
+    Console.WriteLine();
+    }
+}
 
- int rows = 4;
- int colums = 4;
- int[,] Fillmatrix(int[,] matrix)
- {
-    
-     for (int i = 0; i < rows; i++) 
-     {
-         for (int j = 0; j < colums; j++)
-         {
-          matrix[i,j] = new Random().Next(1 , 5); //Rmatrixndom().Next(1,10);
-        
-         }
+int rows = 4;
+int colums = 4;
+int[,] Fillmatrix(int[,] matrix)
+{
 
-     }
-     return matrix;
- }
-  int[,] matrix = new int[rows, colums];
+    for (int i = 0; i < rows; i++) 
+    {
+        for (int j = 0; j < colums; j++)
+        {
+         matrix[i,j] = new Random().Next(1 , 5); //Rmatrixndom().Next(1,10);
 
-     Fillmatrix(matrix);
-     Console.WriteLine();
-     Printmatrix(matrix);
-     MinSum();
-     //Console.WriteLine();
-     //Printmatrixrrmatrixy(mmatrixtrix);
-    
+        }
 
-     void MinSum()
- { 
-     int minRowSum = int.MaxValue;
-     int minIndex = 0;
-     int rowSum = 0;
-    
-     for (int i = 0; i < rows; i++)
-              {
-                 rowSum = 0;
-                 for (int j = 0; j < colums; j++)
-                     rowSum += matrix[i,j];
-                     Console.WriteLine("сумма строки " + rowSum);
-                    
-                
-                    if (rowSum < minRowSum)
-                    {
-                     minRowSum = rowSum;
-                     minIndex = i;
-                     Console.WriteLine("миниммальное промежуточное " + minRowSum);
-                    }
-                
-             }
-              Console.WriteLine("Строка с минимальной суммой элементов");
-                  for(int j = 0; j < colums; j++)
-                     Console.Write(matrix[minIndex, j] + "\t");
- 
-             
+    }
+    return matrix;
+}
+ int[,] matrix = new int[rows, colums];
+
+    Fillmatrix(matrix);
+    Console.WriteLine();
+    Printmatrix(matrix);
+    MinSum();
+    //Console.WriteLine();
+    //Printmatrixrrmatrixy(mmatrixtrix);
+
+
+    void MinSum()
+{ 
+    int minRowSum = int.MaxValue;
+    int minIndex = 0;
+    int rowSum = 0;
+
+    for (int i = 0; i < rows; i++)
+             {
+                rowSum = 0;
+                for (int j = 0; j < colums; j++)
+                    rowSum += matrix[i,j];
+                    Console.WriteLine("сумма строки " + rowSum);
+
+
+                   if (rowSum < minRowSum)
+                   {
+                    minRowSum = rowSum;
+                    minIndex = i;
+                    Console.WriteLine("миниммальное промежуточное " + minRowSum);
+                   }
+
+            }
+             Console.WriteLine("Строка с минимальной суммой элементов");
+                 for(int j = 0; j < colums; j++)
+                    Console.Write(matrix[minIndex, j] + "\t");
+
+
 
 }
 */
