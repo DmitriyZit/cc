@@ -8,7 +8,7 @@
 7 4 2 1
 9 5 3 2
 8 4 4 2
-
+*/
 
 //   Console.Write("Введите колличество строк массива : ");
 //  int sizeS = Convert.ToInt32(Console.ReadLine());
@@ -41,18 +41,51 @@
      {
          for (int j = 0; j < colums; j++)
          {
-          matrix[i,j] = new Random().Next(1 , 5); //Rmatrixndom().Next(1,10);
+          matrix[i,j] = new Random().Next(0 , 10); 
         
          }
 
      }
      return matrix;
  }
-
+ 
+int[,] Arrange(int[,] matr)
+{
+    
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            for (int k = 0; k < matr.GetLength(1) - 1; k++)
+            {
+                if (matr[i, k] < matr[i, k + 1])
+                {
+                    int temp = matr[i, k + 1];
+                    matr[i, k + 1] = matr[i, k];
+                    matr[i, k] = temp;
+                }
+            }
+        }
+        
+    }
+    return matr;
+    
+}
 
   int[,] matrix = new int[rows, colums];
 
-*/
+     Fillmatrix(matrix);
+     Console.WriteLine();
+     Printmatrix(matrix);
+     Arrange(matrix);
+     Console.WriteLine("Упорядочная таблица");
+     Printmatrix(matrix);
+
+     //MinSum();
+     //Console.WriteLine();
+     //Printmatrixrrmatrixy(mmatrixtrix);
+
+
 
 
 /*Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, 
@@ -234,14 +267,19 @@ int[,] Multiplicmat(int[,] matrix, int[,] matrixTwo)
 27(0,0,1) 90(0,1,1)
 26(1,0,1) 55(1,1,1)
 
-*/
 
-//   Console.Write("Введите колличество строк массива : ");
-//  int sizeS = Convert.ToInt32(Console.ReadLine());
+
+  Console.Write("Введите колличество строк массива : ");
+  int rows = Convert.ToInt32(Console.ReadLine());
+
 
     
-//  Console.Write("Введите колличество столбцов массива : ");
-//  int sizeV = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите колличество столбцов массива : ");
+  int colums = Convert.ToInt32(Console.ReadLine());
+
+ Console.Write("Введите глубину  массива : ");
+ int depth = Convert.ToInt32(Console.ReadLine());
+
  
   void Printmatrix(int[,,] matrix)
  {
@@ -260,9 +298,9 @@ int[,] Multiplicmat(int[,] matrix, int[,] matrixTwo)
      }
  }
 
- int rows = 2;
- int colums = 2;
- int depth = 2;
+//  int rows = 2;
+//  int colums = 2;
+//  int depth = 2;
  int[,,] Fillmatrix(int[,,] matrix)
  {
     
@@ -287,6 +325,8 @@ int[,] Multiplicmat(int[,] matrix, int[,] matrixTwo)
     Fillmatrix(matrix);
     Console.WriteLine();
     Printmatrix(matrix);
+
+    */
 /*
 ДОПОЛНИТЕЛЬНАЯ. Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 Например, на выходе получается вот такой массив:
