@@ -119,10 +119,25 @@ Printmatrix(matrix);
     }
 }
 
+<<<<<<< HEAD
 int rows = 4;
 int colums = 4;
 int[,] Fillmatrix(int[,] matrix)
 {
+=======
+ int rows = 4;
+ int colums = 4;
+ int[,] Fillmatrix(int[,] matrix)
+ {
+    
+     for (int i = 0; i < rows; i++) 
+     {
+         for (int j = 0; j < colums; j++)
+         {
+          matrix[i,j] = new Random().Next(1 , 5); 
+        
+         }
+>>>>>>> e0a90a589a81f345e96c1e9cd4af9f641ac5393b
 
     for (int i = 0; i < rows; i++) 
     {
@@ -308,9 +323,9 @@ int[,] Multiplicmat(int[,] matrix, int[,] matrixTwo)
          {
             for (int k = 0; k < depth; k++)
             {
-                matrix[i,j,k] = new Random().Next(10 , 50); //Rmatrixndom().Next(1,10);
+                matrix[i,j,k] = new Random().Next(10 , 50); 
             }
-          //matrix[i,j,k] = new Random().Next(10 , 50); //Rmatrixndom().Next(1,10);
+          
         
          }
 
