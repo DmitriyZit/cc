@@ -10,12 +10,12 @@
 8 4 4 2
 */
 
-//   Console.Write("Введите колличество строк массива : ");
-//  int sizeS = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите колличество строк массива : ");
+ int rows = Convert.ToInt32(Console.ReadLine());
 
     
-//  Console.Write("Введите колличество столбцов массива : ");
-//  int sizeV = Convert.ToInt32(Console.ReadLine());
+ Console.Write("Введите колличество столбцов массива : ");
+ int colums = Convert.ToInt32(Console.ReadLine());
  
   void Printmatrix(int[,] matrix)
  {
@@ -32,8 +32,8 @@
      }
  }
 
- int rows = 4;
- int colums = 4;
+//  int rows = 4;
+//  int colums = 4;
  int[,] Fillmatrix(int[,] matrix)
  {
     
@@ -81,9 +81,7 @@ int[,] Arrange(int[,] matr)
      Console.WriteLine("Упорядочная таблица");
      Printmatrix(matrix);
 
-     //MinSum();
-     //Console.WriteLine();
-     //Printmatrixrrmatrixy(mmatrixtrix);
+     
 
 
 
