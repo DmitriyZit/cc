@@ -119,12 +119,6 @@ Printmatrix(matrix);
     }
 }
 
-<<<<<<< HEAD
-int rows = 4;
-int colums = 4;
-int[,] Fillmatrix(int[,] matrix)
-{
-=======
  int rows = 4;
  int colums = 4;
  int[,] Fillmatrix(int[,] matrix)
@@ -137,7 +131,6 @@ int[,] Fillmatrix(int[,] matrix)
           matrix[i,j] = new Random().Next(1 , 5); 
         
          }
->>>>>>> e0a90a589a81f345e96c1e9cd4af9f641ac5393b
 
     for (int i = 0; i < rows; i++) 
     {
